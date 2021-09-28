@@ -1,0 +1,50 @@
+<html>
+{% include 'header2.html' %}
+<body class="w3-light-grey">
+    {% include 'nav.html' %}
+    <!-- !PAGE CONTENT! -->
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+        <div class="pt-2 text-center">
+            <h1 class="text-center">Database</h1>
+            <br>
+            <br>
+            
+            <div class="px-2 table-responsive">
+                <table id="myTable" class="table table-striped text-center" style="display: table;">
+                    <thead>
+                        <tr>
+                            <th scope="col">#</th>
+                            <th scope="col">Date</th>
+                            <th scope="col">Time</th>
+                            <th scope="col">Image</th>
+                            <th scope="col">Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% if(results) %}
+                        {% for result in results %}
+                        <tr>
+                            <td>{% print(1) %}</td>
+                            <td>{% print(result['date']) %}</td>
+                            <td>{% print(result['time']) %}</td>
+                            <td><img src="{{ url_for('static', filename=result['img_no']) }}" width="100" height="100">
+                            </td>
+                            <td>{% print(result['status']) %}</td>
+                            
+                        </tr>
+                        
+                        {% endfor %}
+                        {% endif %}
+                    </tbody>
+                </table>
+            </div>
+        </div>
+
+
+        <!-- End page content -->
+    </div>
+
+{% include 'script.html' %}
+</body>
+
+</html>

@@ -1,0 +1,41 @@
+<html>
+{% include 'header2.html' %}
+<body class="w3-light-grey">
+
+    {% include 'nav.html' %}
+
+   
+    <div class="w3-main" style="margin-left:300px;margin-top:43px;">
+        <div class="pt-2 text-center">
+            <h1 class="text-center">Mask Detection System</h1>
+            <br>
+            <br>
+            <div class="px-2">
+                <section class="hero" id="hero">
+        
+                    <div class="container" style="margin-top: 10px" id="pager">
+        <div class="row justify-content-md-center">
+            <div class="col-md-8">
+                <div class="card">
+                    <div style="background-color: black;" class="card-header">
+                        <center style="color:white">Mask Detection System</center>
+                    </div>
+                    <div class="card-body text-center">
+                        <img src="{{ url_for('video') }}" />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>    
+            </div>
+
+        </div>
+
+       
+    </div>
+
+{% include 'script.html' %}
+</body>
+
+</html>

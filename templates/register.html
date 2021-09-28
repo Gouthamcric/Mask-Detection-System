@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+
+{% include 'header1.html' %}
+
+<body class="text-center">
+    <form class="form-signin" method="POST" action="/register">
+        <!-- <img class="mb-4" src="/docs/4.4/assets/brand/bootstrap-solid.svg" alt="" width="72" height="72"> -->
+        <i class="fab fa-invision fa-3x"></i>
+        <h1 class="h3 mb-3 font-weight-normal">Please Register</h1>
+        <input type="text" name="first_name"  class="form-control" placeholder="First Name" required autofocus pattern=".{3,}" title="First name should be minimum of 3 characters">
+        <input type="text" name="last_name"  class="form-control" placeholder="Last Name" required>
+        <input type="email" name="username" class="form-control" placeholder="Email address" required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" title="the username, the @ symbol, and the user's domain name">
+        <input type="password" name="password" class="form-control" placeholder="Password" required pattern=".{6,}" title="password should be minimum of 6 characters">
+        <input type="tel" name="phone"  class="form-control" placeholder="Phone(optional)">
+        <input type="text" name="city"  class="form-control" placeholder="city(optional)">
+        <input type="text" name="state"  class="form-control" placeholder="state(optional)">
+        <input type="text" name="address"  class="form-control" placeholder="Address(optional)">
+        <div class="checkbox mb-3">
+            <label>
+                <input type="checkbox" value="remember-me"> Remember me
+            </label>
+        </div>
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Register</button>
+        <a href="/">Already have an account ? Log in ></a>
+        <p class="mt-5 mb-3 text-muted">&copy; Mask Detection System 2021</p>
+    </form>
+</body>
+
+</html>
